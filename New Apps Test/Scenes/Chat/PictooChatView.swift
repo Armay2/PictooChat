@@ -1,5 +1,5 @@
 //
-//  PictooChatDetail.swift
+//  PictooChatView.swift
 //  New Apps Test
 //
 //  Created by Arnaud NOMMAY on 29/03/2024.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct PictooChatDetail: View {
+struct PictooChatView: View {
     @State private var showingSheet = false
     let pictooChat: PictooChat
     
@@ -48,7 +48,7 @@ struct PictooChatDetail_Previews: PreviewProvider {
     
     static var previews: some View {
         NavigationStack {
-            PictooChatDetail(pictooChat: PictooChat.chat1)
+            PictooChatView(pictooChat: PictooChat.chat1)
         }
     }
 }

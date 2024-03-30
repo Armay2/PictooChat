@@ -22,7 +22,7 @@ struct FriendGalleryView: View {
             LazyVGrid(columns: gridLayout, alignment: .center, spacing: 10) {
                 ForEach(pictooChats) { pictooChat in
                     NavigationLink {
-                        PictooChatDetail(pictooChat: pictooChat)
+                        PictooChatView(pictooChat: pictooChat)
                     } label: {
                         AsyncImage(url: pictooChat.imageURL) { image in
                             image

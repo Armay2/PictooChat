@@ -21,11 +21,15 @@
 		516DDEBF2BB8806E0008DF4F /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516DDEBE2BB8806E0008DF4F /* ChatView.swift */; };
 		516DDEC32BB881940008DF4F /* ChatBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516DDEC22BB881940008DF4F /* ChatBubbleView.swift */; };
 		516DDEC52BB8942F0008DF4F /* LoadingImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516DDEC42BB8942F0008DF4F /* LoadingImageView.swift */; };
+		516DDEC72BB895770008DF4F /* FriendsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516DDEC62BB895770008DF4F /* FriendsService.swift */; };
+		516DDEC92BB896120008DF4F /* LongPressCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516DDEC82BB896120008DF4F /* LongPressCircleView.swift */; };
+		516DDECB2BB8A2A20008DF4F /* OnTapGesture+Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516DDECA2BB8A2A20008DF4F /* OnTapGesture+Location.swift */; };
+		516DDECD2BB8A3510008DF4F /* OnLongPressGesture+Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516DDECC2BB8A3500008DF4F /* OnLongPressGesture+Location.swift */; };
 		5199EA352BB74EF800FA515E /* FirendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5199EA342BB74EF800FA515E /* FirendsView.swift */; };
 		5199EA372BB7516200FA515E /* FriendRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5199EA362BB7516200FA515E /* FriendRow.swift */; };
 		5199EA392BB7586800FA515E /* ImageThumnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5199EA382BB7586800FA515E /* ImageThumnail.swift */; };
 		5199EA3B2BB767F700FA515E /* PictooChatItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5199EA3A2BB767F700FA515E /* PictooChatItem.swift */; };
-		5199EA3D2BB7687A00FA515E /* PictooChatDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5199EA3C2BB7687A00FA515E /* PictooChatDetail.swift */; };
+		5199EA3D2BB7687A00FA515E /* PictooChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5199EA3C2BB7687A00FA515E /* PictooChatView.swift */; };
 		5199EA3F2BB776F700FA515E /* TestGaleryAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5199EA3E2BB776F700FA515E /* TestGaleryAnimation.swift */; };
 /* End PBXBuildFile section */
 
@@ -65,11 +69,15 @@
 		516DDEBE2BB8806E0008DF4F /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		516DDEC22BB881940008DF4F /* ChatBubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubbleView.swift; sourceTree = "<group>"; };
 		516DDEC42BB8942F0008DF4F /* LoadingImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingImageView.swift; sourceTree = "<group>"; };
+		516DDEC62BB895770008DF4F /* FriendsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsService.swift; sourceTree = "<group>"; };
+		516DDEC82BB896120008DF4F /* LongPressCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongPressCircleView.swift; sourceTree = "<group>"; };
+		516DDECA2BB8A2A20008DF4F /* OnTapGesture+Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OnTapGesture+Location.swift"; sourceTree = "<group>"; };
+		516DDECC2BB8A3500008DF4F /* OnLongPressGesture+Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OnLongPressGesture+Location.swift"; sourceTree = "<group>"; };
 		5199EA342BB74EF800FA515E /* FirendsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirendsView.swift; sourceTree = "<group>"; };
 		5199EA362BB7516200FA515E /* FriendRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendRow.swift; sourceTree = "<group>"; };
 		5199EA382BB7586800FA515E /* ImageThumnail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageThumnail.swift; sourceTree = "<group>"; };
 		5199EA3A2BB767F700FA515E /* PictooChatItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictooChatItem.swift; sourceTree = "<group>"; };
-		5199EA3C2BB7687A00FA515E /* PictooChatDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictooChatDetail.swift; sourceTree = "<group>"; };
+		5199EA3C2BB7687A00FA515E /* PictooChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictooChatView.swift; sourceTree = "<group>"; };
 		5199EA3E2BB776F700FA515E /* TestGaleryAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestGaleryAnimation.swift; sourceTree = "<group>"; };
 		CA2697442BB713AC00209EAB /* GalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -126,6 +134,9 @@
 				14374FB12B989FD500131332 /* New_Apps_TestApp.swift */,
 				14374FDC2B98A02600131332 /* UnsplashService.swift */,
 				14E2F7352B9F6385007CCA2C /* ChatService.swift */,
+				516DDEC62BB895770008DF4F /* FriendsService.swift */,
+				516DDECA2BB8A2A20008DF4F /* OnTapGesture+Location.swift */,
+				516DDECC2BB8A3500008DF4F /* OnLongPressGesture+Location.swift */,
 				5199EA412BB8346A00FA515E /* Scenes */,
 				5199EA402BB8339400FA515E /* Investigation */,
 				14374FB52B989FD700131332 /* Assets.xcassets */,
@@ -181,8 +192,7 @@
 		516DDEB82BB836A50008DF4F /* Chat */ = {
 			isa = PBXGroup;
 			children = (
-				5199EA3A2BB767F700FA515E /* PictooChatItem.swift */,
-				5199EA3C2BB7687A00FA515E /* PictooChatDetail.swift */,
+				5199EA3C2BB7687A00FA515E /* PictooChatView.swift */,
 				516DDEBE2BB8806E0008DF4F /* ChatView.swift */,
 				516DDEC22BB881940008DF4F /* ChatBubbleView.swift */,
 			);
@@ -192,6 +202,8 @@
 		5199EA402BB8339400FA515E /* Investigation */ = {
 			isa = PBXGroup;
 			children = (
+				516DDEC82BB896120008DF4F /* LongPressCircleView.swift */,
+				5199EA3A2BB767F700FA515E /* PictooChatItem.swift */,
 				5199EA382BB7586800FA515E /* ImageThumnail.swift */,
 				CA2697442BB713AC00209EAB /* GalleryView.swift */,
 				5199EA3E2BB776F700FA515E /* TestGaleryAnimation.swift */,
@@ -342,17 +354,21 @@
 			files = (
 				516DDEBA2BB836F40008DF4F /* FriendModel.swift in Sources */,
 				5199EA352BB74EF800FA515E /* FirendsView.swift in Sources */,
+				516DDECD2BB8A3510008DF4F /* OnLongPressGesture+Location.swift in Sources */,
 				5199EA372BB7516200FA515E /* FriendRow.swift in Sources */,
 				14E2F7362B9F6385007CCA2C /* ChatService.swift in Sources */,
 				14374FB22B989FD500131332 /* New_Apps_TestApp.swift in Sources */,
 				516DDEC52BB8942F0008DF4F /* LoadingImageView.swift in Sources */,
 				5199EA3B2BB767F700FA515E /* PictooChatItem.swift in Sources */,
 				516DDEBF2BB8806E0008DF4F /* ChatView.swift in Sources */,
-				5199EA3D2BB7687A00FA515E /* PictooChatDetail.swift in Sources */,
+				516DDEC92BB896120008DF4F /* LongPressCircleView.swift in Sources */,
+				5199EA3D2BB7687A00FA515E /* PictooChatView.swift in Sources */,
 				5199EA392BB7586800FA515E /* ImageThumnail.swift in Sources */,
 				516DDEC32BB881940008DF4F /* ChatBubbleView.swift in Sources */,
+				516DDEC72BB895770008DF4F /* FriendsService.swift in Sources */,
 				516DDEBB2BB838550008DF4F /* GalleryView.swift in Sources */,
 				516DDEBD2BB83DAA0008DF4F /* FriendGalleryView.swift in Sources */,
+				516DDECB2BB8A2A20008DF4F /* OnTapGesture+Location.swift in Sources */,
 				5199EA3F2BB776F700FA515E /* TestGaleryAnimation.swift in Sources */,
 				14374FDD2B98A02600131332 /* UnsplashService.swift in Sources */,
 			);
@@ -586,6 +602,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 297AHX4JHU;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				MACOSX_DEPLOYMENT_TARGET = 14.3;
@@ -608,6 +625,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 297AHX4JHU;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				MACOSX_DEPLOYMENT_TARGET = 14.3;
@@ -629,6 +647,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 297AHX4JHU;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				MACOSX_DEPLOYMENT_TARGET = 14.3;
@@ -650,6 +669,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 297AHX4JHU;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				MACOSX_DEPLOYMENT_TARGET = 14.3;
