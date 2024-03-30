@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct FirendsView: View {
-    @State var friends: [Friend] = []
+    @State var friends: [FriendModel] = []
     
     var body: some View {
         NavigationStack {
@@ -28,7 +28,7 @@ struct FirendsView: View {
             .padding(.top, 24)
         }
         .task {
-            friends = [Friend.mike, Friend.kate]
+            friends = [FriendModel.mike, FriendModel.kate]
         }
     }
 }
