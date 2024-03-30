@@ -13,14 +13,20 @@ This project involves the creation of a social app focused on sharing photos. De
 - **Creating GitHub Repository**: Set up the project repository on GitHub to facilitate version control.
 - **Mood Board Creation on Figma**: Utilize Figma to create a mood board that visually represents the theme, style, and overall ambiance of the app. This helps in setting the design direction and ensures coherence throughout the project.
 
-### Step 2: Wireframe Creation
+### Step 2: Wireframe, Mood board & Code investigation
 
 - **Generating Initial Ideas**: Brainstorm and sketch out initial ideas for the app's layout, features, and user interface.
-- **Creating Wireframes**: Develop basic wireframes using Figma oroutline the structure and functionality of key app screens.
+- **Creating Wireframes**: Develop basic wireframes using [Figma](https://www.figma.com/file/Y74UIOG29vRh5s54mOXSmh/POC-iOS-APP?type=design&node-id=406%3A435&mode=design&t=NPDUuSdlJLVVXYY7-1) oroutline the structure and functionality of key app screens.
 - **Code Experimentation**: Different style of picture galery using 
 
-### Additional Steps (Not Included in this README)
 
+
+| Image fullscreen  | Transition   | Gallery   |
+|-------------|-------------|-------------|
+| <img src="./media/image-fullscreen.gif" width="300">   | <img src="./media/image-transit.gif" width="300">   | <img src="./media/image-gallery.png" width="300">   |
+
+
+### Step 2:
 
 ## Installation
 
