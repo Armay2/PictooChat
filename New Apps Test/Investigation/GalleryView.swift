@@ -38,7 +38,7 @@ struct GalleryView: View {
                     }
                 }
             }
-            .padding()
+            .padding(10)
         }
         .navigationBarTitleDisplayMode(.inline)
         .navigationTitle("Mike")
