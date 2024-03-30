@@ -24,7 +24,7 @@ struct PopoverContent: View {
                 Text(circleChat.text)
                     .padding()
             } else {
-                TextField("Enter text here", text: $inputText, onCommit: {
+                TextField("Write a message", text: $inputText, onCommit: {
                     submitText()
                 })
                 .textFieldStyle(RoundedBorderTextFieldStyle())
@@ -38,7 +38,6 @@ struct PopoverContent: View {
         inputText = ""
     }
 }
-
 
 struct LongPressCircleView: View {
     @State private var circles: [ChatCircle] = []
@@ -72,6 +71,9 @@ struct LongPressCircleView: View {
                                                                   height: 0)))) {
                         PopoverContent(circleChat: circle) { text in
                             circleChatSend(text: text, circle: circle)
+                        }
+                        .onDisappear {
+                            activePopoverId = nil
                         }
                         .presentationCompactAdaptation(.popover)
                     }
