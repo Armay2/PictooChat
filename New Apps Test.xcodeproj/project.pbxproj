@@ -135,8 +135,6 @@
 				14374FDC2B98A02600131332 /* UnsplashService.swift */,
 				14E2F7352B9F6385007CCA2C /* ChatService.swift */,
 				516DDEC62BB895770008DF4F /* FriendsService.swift */,
-				516DDECA2BB8A2A20008DF4F /* OnTapGesture+Location.swift */,
-				516DDECC2BB8A3500008DF4F /* OnLongPressGesture+Location.swift */,
 				5199EA412BB8346A00FA515E /* Scenes */,
 				5199EA402BB8339400FA515E /* Investigation */,
 				14374FB52B989FD700131332 /* Assets.xcassets */,
@@ -199,6 +197,16 @@
 			path = Chat;
 			sourceTree = "<group>";
 		};
+		516DDECE2BB8AE5E0008DF4F /* UIAddons */ = {
+			isa = PBXGroup;
+			children = (
+				516DDEC42BB8942F0008DF4F /* LoadingImageView.swift */,
+				516DDECA2BB8A2A20008DF4F /* OnTapGesture+Location.swift */,
+				516DDECC2BB8A3500008DF4F /* OnLongPressGesture+Location.swift */,
+			);
+			path = UIAddons;
+			sourceTree = "<group>";
+		};
 		5199EA402BB8339400FA515E /* Investigation */ = {
 			isa = PBXGroup;
 			children = (
@@ -214,7 +222,7 @@
 		5199EA412BB8346A00FA515E /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				516DDEC42BB8942F0008DF4F /* LoadingImageView.swift */,
+				516DDECE2BB8AE5E0008DF4F /* UIAddons */,
 				516DDEB82BB836A50008DF4F /* Chat */,
 				516DDEB72BB836760008DF4F /* Gallery */,
 				516DDEB62BB8366B0008DF4F /* Friends */,
