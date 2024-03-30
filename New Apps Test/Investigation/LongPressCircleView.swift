@@ -14,21 +14,36 @@ struct ChatCircle: Identifiable {
 }
 
 struct PopoverContent: View {
-    let text: String
+    var circleChat: ChatCircle
+    var onSubmit: (String) -> Void
+    @State private var inputText: String = ""
     
     var body: some View {
-        Text(text)
-            .padding()
-            .background(Color.white)
-            .cornerRadius(10)
-            .shadow(radius: 5)
+        VStack {
+            if !circleChat.text.isEmpty {
+                Text(circleChat.text)
+                    .padding()
+            } else {
+                TextField("Enter text here", text: $inputText, onCommit: {
+                    submitText()
+                })
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding()
+            }
+        }
+    }
+    
+    private func submitText() {
+        onSubmit(inputText)
+        inputText = ""
     }
 }
+
 
 struct LongPressCircleView: View {
     @State private var circles: [ChatCircle] = []
     @State private var activePopoverId: UUID?
-
+    
     var body: some View {
         ZStack {
             VStack {
@@ -38,7 +53,6 @@ struct LongPressCircleView: View {
                         print("location \(location)")
                         circles.append(newCircle)
                         activePopoverId = nil
-
                     }
                 Color.green
             }
@@ -49,16 +63,31 @@ struct LongPressCircleView: View {
                     .foregroundColor(.red)
                     .position(circle.position)
                     .onTapGesture {
-                            activePopoverId = circle.id
-                     }
+                        activePopoverId = circle.id
+                    }
                     .popover(isPresented: .constant(activePopoverId == circle.id),
-                             attachmentAnchor: .rect(.rect(CGRect(x: circle.position.x, y: circle.position.y, width: 0, height: 0)))) {
-                        PopoverContent(text: circle.id.uuidString)
-                             .presentationCompactAdaptation(.popover)
-                     }
+                             attachmentAnchor: .rect(.rect(CGRect(x: circle.position.x,
+                                                                  y: circle.position.y,
+                                                                  width: 0,
+                                                                  height: 0)))) {
+                        PopoverContent(circleChat: circle) { text in
+                            circleChatSend(text: text, circle: circle)
+                        }
+                        .presentationCompactAdaptation(.popover)
+                    }
             }
         }
+    }
+    
+    //TODO: Change that logic: it's not suitable !
+    private func circleChatSend(text: String, circle: ChatCircle) {
+        guard let oldCircle = circles.first(where: { $0.id == circle.id }) else {
+            return
+        }
         
+        circles.removeAll(where: {$0.id == oldCircle.id})
+        let new = ChatCircle(position: oldCircle.position, text: text)
+        circles.append(new)
     }
 }
 
