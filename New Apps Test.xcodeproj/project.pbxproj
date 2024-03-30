@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		14374FB22B989FD500131332 /* New_Apps_TestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14374FB12B989FD500131332 /* New_Apps_TestApp.swift */; };
-		14374FB42B989FD500131332 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14374FB32B989FD500131332 /* ContentView.swift */; };
 		14374FB62B989FD700131332 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14374FB52B989FD700131332 /* Assets.xcassets */; };
 		14374FBA2B989FD700131332 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14374FB92B989FD700131332 /* Preview Assets.xcassets */; };
 		14374FC42B989FD700131332 /* New_Apps_TestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14374FC32B989FD700131332 /* New_Apps_TestTests.swift */; };
@@ -45,7 +44,6 @@
 /* Begin PBXFileReference section */
 		14374FAE2B989FD500131332 /* New Apps Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "New Apps Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		14374FB12B989FD500131332 /* New_Apps_TestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = New_Apps_TestApp.swift; sourceTree = "<group>"; };
-		14374FB32B989FD500131332 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		14374FB52B989FD700131332 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		14374FB72B989FD700131332 /* New_Apps_Test.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = New_Apps_Test.entitlements; sourceTree = "<group>"; };
 		14374FB92B989FD700131332 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -116,7 +114,8 @@
 			isa = PBXGroup;
 			children = (
 				14374FB12B989FD500131332 /* New_Apps_TestApp.swift */,
-				14374FB32B989FD500131332 /* ContentView.swift */,
+				14374FDC2B98A02600131332 /* UnsplashService.swift */,
+				14E2F7352B9F6385007CCA2C /* ChatService.swift */,
 				5199EA412BB8346A00FA515E /* Scenes */,
 				5199EA402BB8339400FA515E /* Investigation */,
 				14374FB52B989FD700131332 /* Assets.xcassets */,
@@ -151,6 +150,33 @@
 			path = "New Apps TestUITests";
 			sourceTree = "<group>";
 		};
+		516DDEB62BB8366B0008DF4F /* Friends */ = {
+			isa = PBXGroup;
+			children = (
+				5199EA362BB7516200FA515E /* FriendRow.swift */,
+				5199EA342BB74EF800FA515E /* FirendsView.swift */,
+			);
+			path = Friends;
+			sourceTree = "<group>";
+		};
+		516DDEB72BB836760008DF4F /* Gallery */ = {
+			isa = PBXGroup;
+			children = (
+				5199EA382BB7586800FA515E /* ImageThumnail.swift */,
+				CA2697442BB713AC00209EAB /* GalleryView.swift */,
+			);
+			path = Gallery;
+			sourceTree = "<group>";
+		};
+		516DDEB82BB836A50008DF4F /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				5199EA3A2BB767F700FA515E /* PictooChatItem.swift */,
+				5199EA3C2BB7687A00FA515E /* PictooChatDetail.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
 		5199EA402BB8339400FA515E /* Investigation */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,14 +188,9 @@
 		5199EA412BB8346A00FA515E /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				CA2697442BB713AC00209EAB /* GalleryView.swift */,
-				5199EA342BB74EF800FA515E /* FirendsView.swift */,
-				14374FDC2B98A02600131332 /* UnsplashService.swift */,
-				5199EA362BB7516200FA515E /* FriendRow.swift */,
-				5199EA382BB7586800FA515E /* ImageThumnail.swift */,
-				5199EA3A2BB767F700FA515E /* PictooChatItem.swift */,
-				5199EA3C2BB7687A00FA515E /* PictooChatDetail.swift */,
-				14E2F7352B9F6385007CCA2C /* ChatService.swift */,
+				516DDEB82BB836A50008DF4F /* Chat */,
+				516DDEB72BB836760008DF4F /* Gallery */,
+				516DDEB62BB8366B0008DF4F /* Friends */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -306,7 +327,6 @@
 			files = (
 				5199EA352BB74EF800FA515E /* FirendsView.swift in Sources */,
 				5199EA372BB7516200FA515E /* FriendRow.swift in Sources */,
-				14374FB42B989FD500131332 /* ContentView.swift in Sources */,
 				14E2F7362B9F6385007CCA2C /* ChatService.swift in Sources */,
 				14374FB22B989FD500131332 /* New_Apps_TestApp.swift in Sources */,
 				5199EA3B2BB767F700FA515E /* PictooChatItem.swift in Sources */,
