@@ -31,12 +31,8 @@ struct FriendGalleryView: View {
                                 .frame(minWidth: 0, maxWidth: .infinity)
                                 .cornerRadius(10)
                         } placeholder: {
-                            ZStack {
-                                ProgressView()
-                                Rectangle()
-                                    .frame(width: 100, height: 100)
-                                    .foregroundStyle(.gray).opacity(0.2)
-                            }
+                            LoadingImageView()
+                            .frame(width: 100, height: 100)
                         }
                     }
                 }

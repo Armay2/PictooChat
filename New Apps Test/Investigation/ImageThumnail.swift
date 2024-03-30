@@ -53,7 +53,7 @@ struct PictooGallery: View {
 //                                    .matchedGeometryEffect(id: "image", in: namespace)
                                     .frame(width: 100)
                             } placeholder: {
-                                Rectangle()
+                                LoadingImageView()
                                     .frame(width: 100)
                             }
                         }

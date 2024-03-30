@@ -76,6 +76,7 @@ struct ChatView: View {
             }
             .padding()
         }
+        .padding(.top)
     }
     
     private func scrollToLastMessage(with scrollView: ScrollViewProxy) {

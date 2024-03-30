@@ -19,7 +19,7 @@ struct PictooChatDetail: View {
                     .scaledToFill()
                     .edgesIgnoringSafeArea(.all)
             } placeholder: {
-                Rectangle()
+                LoadingImageView()
                     .frame(maxWidth: .infinity, maxHeight: 400)
             }
             Spacer()
@@ -44,7 +44,6 @@ struct PictooChatDetail: View {
 }
 
 struct PictooChatDetail_Previews: PreviewProvider {
-    @Namespace static var namespace
     static let image = Image(systemName: "gear")
     
     static var previews: some View {

@@ -23,7 +23,7 @@ This project involves the creation of a social app focused on sharing photos. De
 
 | Image fullscreen  | Transition   | Gallery   |
 |-------------|-------------|-------------|
-| <img src="./media/image-fullscreen.gif" width="300">   | <img src="./media/image-transit.gif" width="300">   | <img src="./media/image-gallery.png" width="300">   |
+| <img src="./media/image-fullscreen.gif" height ="500">   | <img src="./media/image-transit.gif" height="500">   | <img src="./media/image-gallery.png" height ="500">   |
 
 
 ### Step 2:

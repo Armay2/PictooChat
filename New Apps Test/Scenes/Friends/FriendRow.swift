@@ -19,7 +19,8 @@ struct FriendRow: View {
                         .clipShape(Capsule())
                         .frame(width: 40, height: 40)
                 } placeholder: {
-                    Circle()
+                    LoadingImageView()
+                        .clipShape(Circle())
                         .frame(width: 40, height: 40)
                 }
                 Text(friend.name)
@@ -29,14 +30,14 @@ struct FriendRow: View {
             
             ScrollView(.horizontal) {
                 LazyHStack {
-                    ForEach(friend.PictooChats) { pictooChat in
-                        AsyncImage(url: pictooChat.imageURL) { image in
+                    ForEach(friend.imagesThumnail, id: \.self) { imageURL in
+                        AsyncImage(url: imageURL) { image in
                             image
                                 .resizable()
                                 .cornerRadius(8)
                                 .frame(width: 100, height: 100)
                         } placeholder: {
-                            Rectangle()
+                            LoadingImageView()
                                 .frame(width: 100, height: 100)
                         }
                     }
