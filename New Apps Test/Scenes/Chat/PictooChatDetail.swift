@@ -8,24 +8,38 @@
 import SwiftUI
 
 struct PictooChatDetail: View {
-    let image: Image
+    @State private var showingSheet = false
     let pictooChat: PictooChat
-    var namespace: Namespace.ID
-    let closeChat: () -> ()
     
     var body: some View {
         VStack {
-            image
-                .resizable()
-                .scaledToFill()
-                .matchedGeometryEffect(id: "image", in: namespace)
-                .frame(height: 400)
+            AsyncImage(url: pictooChat.imageURL) { image in
+                image
+                    .resizable()
+                    .scaledToFill()
+                    .edgesIgnoringSafeArea(.all)
+            } placeholder: {
+                Rectangle()
+                    .frame(maxWidth: .infinity, maxHeight: 400)
+            }
             Spacer()
         }
-        .background(Color.red.matchedGeometryEffect(id: "background", in: namespace))
+        .background(.white)
         .frame(maxWidth: .infinity)
-        .ignoresSafeArea()
-        
+        .toolbar {
+            ToolbarItemGroup(placement: .bottomBar) {
+                Spacer()
+                Button(action: {
+                    self.showingSheet = true
+                }) {
+                    Image(systemName: "message")
+                }
+            }
+        }
+        .sheet(isPresented: $showingSheet) {
+            ChatView()
+                .presentationDetents([.medium, .large])
+        }
     }
 }
 
@@ -34,8 +48,8 @@ struct PictooChatDetail_Previews: PreviewProvider {
     static let image = Image(systemName: "gear")
     
     static var previews: some View {
-        PictooChatDetail(image: image,
-                         pictooChat: PictooChat.chat1,
-                         namespace: namespace, closeChat: {})
+        NavigationStack {
+            PictooChatDetail(pictooChat: PictooChat.chat1)
+        }
     }
 }

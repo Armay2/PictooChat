@@ -75,5 +75,5 @@ struct ChatBubbleView: View {
 
 
 #Preview {
-    ChatBubbleView(message: "This is the message", direction: .right)
+    ChatBubbleView(message: "message", direction: .right)
 }
