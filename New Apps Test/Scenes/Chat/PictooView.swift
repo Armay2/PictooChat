@@ -10,38 +10,41 @@ import SwiftUI
 struct PictooView: View {
     let areChatCirclesVisible: Bool
     var pictooChat: PictooChat
-
+    
     @State private var activePopoverId: UUID?
-    @GestureState private var zoom = 1.0
-
+    @State private var scale: CGFloat = 1.0
+    
     var body: some View {
-        ZStack {
-            AsyncImage(url: pictooChat.imageURL) { image in
-                image
-                    .resizable()
-                    .scaledToFill()
-                    .edgesIgnoringSafeArea(.all)
-                    .scaleEffect(zoom)
-                    .gesture(
-                        MagnifyGesture()
-                            .updating($zoom) { value, gestureState, transaction in
-                                gestureState = value.magnification
-                            }
-                    )
-            } placeholder: {
-                LoadingImageView()
-                    .frame(maxWidth: .infinity, maxHeight: 400)
-            }
-            .onLongPressGesture { location in
-                let newCircle = ChatCircle(position: location)
-                pictooChat.chatCircle.append(newCircle)
-                activePopoverId = nil
-            }
-            
-            if areChatCirclesVisible {
-                chatCircles
-            }
+        ScrollView([.horizontal], showsIndicators: false) {
+            ZStack {
+                AsyncImage(url: pictooChat.imageURL) { image in
+                    image
+                        .resizable()
+                        .scaledToFill()
+                        .scaleEffect(scale) // Apply the dynamic scale factor
+                        .gesture(
+                            MagnificationGesture()
+                                .onChanged { value in
+                                    // Update the scale factor based on the gesture's progress
+                                    scale = value
+                                }
+                        )
+                } placeholder: {
+                    LoadingImageView()
+                        .frame(maxWidth: .infinity, maxHeight: 400)
+                }
+                .onLongPressGesture { location in
+                    let newCircle = ChatCircle(position: location)
+                    pictooChat.chatCircle.append(newCircle)
+                    activePopoverId = nil
+                }
+                
+                if areChatCirclesVisible {
+                    chatCircles
+                }
+            }.edgesIgnoringSafeArea(.top)
         }
+        .edgesIgnoringSafeArea(.top)
     }
     
     private var chatCircles: some View {

@@ -10,13 +10,10 @@ import SwiftUI
 struct PictooChatView: View {
     @State private var isChatSheetPresented = false
     @State private var areChatCirclesVisible = true
-    var pictooChat: PictooChat
+    @State var pictooChat: PictooChat
     
     var body: some View {
-        VStack {
-            PictooView(areChatCirclesVisible: areChatCirclesVisible, pictooChat: pictooChat)
-            Spacer()
-        }
+        PictooView(areChatCirclesVisible: areChatCirclesVisible, pictooChat: pictooChat)
         .toolbar {
             ToolbarItemGroup(placement: .bottomBar) {
                 cleanButton
