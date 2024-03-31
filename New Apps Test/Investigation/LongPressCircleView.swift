@@ -7,12 +7,6 @@
 
 import SwiftUI
 
-struct ChatCircle: Identifiable {
-    let id: UUID = UUID()
-    var position: CGPoint
-    var text: String = ""
-}
-
 struct PopoverContent: View {
     var circleChat: ChatCircle
     var onSubmit: (String) -> Void

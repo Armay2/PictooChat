@@ -28,6 +28,7 @@
 		516DDED22BB999F80008DF4F /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516DDED12BB999F80008DF4F /* Message.swift */; };
 		516DDED72BB9AE3F0008DF4F /* PictooChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516DDED62BB9AE3F0008DF4F /* PictooChatModel.swift */; };
 		516DDEDC2BB9F8AE0008DF4F /* Networker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516DDEDB2BB9F8AE0008DF4F /* Networker.swift */; };
+		516DDEE22BBA08340008DF4F /* ChatCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516DDEE12BBA08340008DF4F /* ChatCircle.swift */; };
 		5199EA352BB74EF800FA515E /* FirendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5199EA342BB74EF800FA515E /* FirendsView.swift */; };
 		5199EA372BB7516200FA515E /* FriendRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5199EA362BB7516200FA515E /* FriendRow.swift */; };
 		5199EA392BB7586800FA515E /* ImageThumnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5199EA382BB7586800FA515E /* ImageThumnail.swift */; };
@@ -79,6 +80,7 @@
 		516DDED12BB999F80008DF4F /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		516DDED62BB9AE3F0008DF4F /* PictooChatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictooChatModel.swift; sourceTree = "<group>"; };
 		516DDEDB2BB9F8AE0008DF4F /* Networker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networker.swift; sourceTree = "<group>"; };
+		516DDEE12BBA08340008DF4F /* ChatCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCircle.swift; sourceTree = "<group>"; };
 		5199EA342BB74EF800FA515E /* FirendsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirendsView.swift; sourceTree = "<group>"; };
 		5199EA362BB7516200FA515E /* FriendRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendRow.swift; sourceTree = "<group>"; };
 		5199EA382BB7586800FA515E /* ImageThumnail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageThumnail.swift; sourceTree = "<group>"; };
@@ -241,6 +243,7 @@
 		516DDEDE2BB9FE290008DF4F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				516DDEE12BBA08340008DF4F /* ChatCircle.swift */,
 				516DDED12BB999F80008DF4F /* Message.swift */,
 				516DDED62BB9AE3F0008DF4F /* PictooChatModel.swift */,
 			);
@@ -418,6 +421,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				516DDEBA2BB836F40008DF4F /* FriendModel.swift in Sources */,
+				516DDEE22BBA08340008DF4F /* ChatCircle.swift in Sources */,
 				5199EA352BB74EF800FA515E /* FirendsView.swift in Sources */,
 				516DDECD2BB8A3510008DF4F /* OnLongPressGesture+Location.swift in Sources */,
 				5199EA372BB7516200FA515E /* FriendRow.swift in Sources */,
