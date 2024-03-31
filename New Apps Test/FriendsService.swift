@@ -27,9 +27,9 @@ actor FriendsService {
         let stringURLs = await imageService.getFeaturedPhotos()
         let pictooChats = stringURLs.compactMap { stringURL -> PictooChat? in
             guard let url = URL(string: stringURL) else { return nil }
-            return PictooChat(imageURL: url, messages: [])
+            return PictooChat(imageURL: url, messages: [], chatCircle: [])
         }
         
-        return pictooChats
+        return pictooChats.shuffled()
     }
 }

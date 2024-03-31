@@ -8,14 +8,15 @@
 import SwiftUI
 
 struct ChatView: View {
-    @ObservedObject var viewModel: PictooChatViewModel
-
+    var pictooChat: PictooChat
+    @State var typingMessage: String = ""
+    
     var body: some View {
         VStack {
             ScrollView {
                 ScrollViewReader { scrollView in
                     VStack(alignment: .leading, spacing: 10) {
-                        ForEach(viewModel.messages) { message in
+                        ForEach(pictooChat.messages) { message in
                             HStack {
                                 if message.isCurrentUser {
                                     Spacer()
@@ -28,7 +29,7 @@ struct ChatView: View {
                             .padding(.horizontal)
                         }
                     }
-                    .onChange(of: viewModel.messages) {
+                    .onChange(of: pictooChat.messages) {
                         scrollToLastMessage(with: scrollView)
                     }
                     .onAppear {
@@ -38,28 +39,36 @@ struct ChatView: View {
             }
             
             HStack {
-                TextField("Type a message...", text: $viewModel.newMessageText)
+                TextField("Type a message...", text: $typingMessage)
                     .textFieldStyle(.roundedBorder)
                     .onSubmit {
-                        viewModel.sendMessage()
+                        sendMessage()
                     }
                 Button(action: {
-                    viewModel.sendMessage()
+                    sendMessage()
                 }) {
                     Image(systemName: "arrow.up.circle.fill")
                         .resizable()
                         .frame(width: 30, height: 30)
-                        .foregroundColor(viewModel.newMessageText.isEmpty ? .gray : .blue)
+                        .foregroundColor(typingMessage.isEmpty ? .gray : .blue)
                 }
-                .disabled(viewModel.newMessageText.isEmpty)
+                .disabled(typingMessage.isEmpty)
             }
             .padding()
         }
         .padding(.top)
     }
     
+    private func sendMessage() {
+        let newMessage = Message(text: typingMessage, isCurrentUser: true)
+        let fakeResponce = Message(text: "Hey this is my answer !", isCurrentUser: false)
+        pictooChat.messages.append(newMessage)
+        pictooChat.messages.append(fakeResponce)
+        typingMessage = ""
+    }
+    
     private func scrollToLastMessage(with scrollView: ScrollViewProxy) {
-        if let lastMessage = viewModel.messages.last {
+        if let lastMessage = pictooChat.messages.last {
             scrollView.scrollTo(lastMessage.id, anchor: .bottom)
         }
     }
@@ -69,5 +78,5 @@ struct ChatView: View {
 
 
 #Preview {
-    ChatView(viewModel: PictooChatViewModel())
+    ChatView( pictooChat: PictooChat.chat1)
 }

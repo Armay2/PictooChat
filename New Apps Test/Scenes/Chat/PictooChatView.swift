@@ -7,34 +7,14 @@
 
 import SwiftUI
 
-struct Message: Identifiable, Equatable {
-    let id = UUID()
-    let text: String
-    let isCurrentUser: Bool
-}
-
-class PictooChatViewModel: ObservableObject {
-    @Published var messages: [Message] = []
-    @Published var newMessageText = ""
-    
-    func sendMessage() {
-        let newMessage = Message(text: newMessageText, isCurrentUser: true)
-        let fakeResponce = Message(text: "Hey this is my answer !", isCurrentUser: false)
-        messages.append(newMessage)
-        messages.append(fakeResponce)
-        newMessageText = ""
-    }
-}
-
 struct PictooChatView: View {
-    @StateObject private var viewModel = PictooChatViewModel()
     @State private var isChatSheetPresented = false
-    @State private var isPictooComVisible = true
+    @State private var areChatCirclesVisible = true
     var pictooChat: PictooChat
     
     var body: some View {
         VStack {
-            PictooView(pictooChat: pictooChat)
+            PictooView(areChatCirclesVisible: areChatCirclesVisible, pictooChat: pictooChat)
             Spacer()
         }
         .toolbar {
@@ -47,7 +27,7 @@ struct PictooChatView: View {
             }
         }
         .sheet(isPresented: $isChatSheetPresented) {
-            ChatView(viewModel: viewModel)
+            ChatView(pictooChat: pictooChat)
                 .presentationDetents([.medium, .large])
         }
     }
@@ -63,11 +43,11 @@ struct PictooChatView: View {
     
     private var toggleVisibilityButton: some View {
         Button(action: {
-            isPictooComVisible.toggle()
+            areChatCirclesVisible.toggle()
         }) {
             VStack {
-                Image(systemName: isPictooComVisible ? "eye.slash.fill" : "eye.fill")
-                Text(isPictooComVisible ? "Hide" : "Show")
+                Image(systemName: areChatCirclesVisible ? "eye.slash.fill" : "eye.fill")
+                Text(areChatCirclesVisible ? "Hide" : "Show")
             }
         }
     }
@@ -84,8 +64,7 @@ struct PictooChatView: View {
     }
     
     private func clearPictooCom() {
-        // Implement the cleaning logic here
-        pictooChat.messages.append("New message")
+        pictooChat.chatCircle.removeAll()
     }
 }
 
