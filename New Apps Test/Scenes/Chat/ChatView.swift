@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ChatView: View {
-    var pictooChat: PictooChat
+    var pictooChat: PictooChatModel
     @State var typingMessage: String = ""
     
     var body: some View {
@@ -74,9 +74,8 @@ struct ChatView: View {
     }
 }
 
-
-
-
+#if DEBUG
 #Preview {
-    ChatView( pictooChat: PictooChat.chat1)
+    ChatView( pictooChat: PictooChatModel.chat1)
 }
+#endif

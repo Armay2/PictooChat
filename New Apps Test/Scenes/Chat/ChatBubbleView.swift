@@ -73,7 +73,19 @@ struct ChatBubbleView: View {
     }
 }
 
+struct ChatBubbleView_Previews: PreviewProvider {
+    static var previews: some View {
+        Group {
+            ChatBubbleView(message: "message", direction: .right)
+                .previewLayout(PreviewLayout.sizeThatFits)
+                .padding()
+                .previewDisplayName("Sended")
+            
+            ChatBubbleView(message: "message", direction: .left)
+                .previewLayout(PreviewLayout.sizeThatFits)
+                .padding()
+                .previewDisplayName("Recived")
+        }
 
-#Preview {
-    ChatBubbleView(message: "message", direction: .right)
+    }
 }

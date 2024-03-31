@@ -19,7 +19,7 @@ struct FirendsView: View {
                 VStack(alignment: .leading, spacing: 24) {
                     ForEach(friends) { friend in
                         NavigationLink {
-                            FriendGalleryView()
+                            FriendGalleryView(firendID: friend.id)
                         } label: {
                             FriendRow(friend: friend)
                         }
@@ -36,6 +36,8 @@ struct FirendsView: View {
     }
 }
 
+#if DEBUG
 #Preview {
     FirendsView()
 }
+#endif

@@ -9,7 +9,7 @@ import SwiftUI
 import Observation
 
 struct PictooGallery: View {
-    let pictooChats: [PictooChat]
+    let pictooChats: [PictooChatModel]
     let gridLayout = [
         GridItem(.flexible(minimum: 40)),
         GridItem(.flexible(minimum: 40))
@@ -18,7 +18,7 @@ struct PictooGallery: View {
     @Namespace var namespace
     @State private var showDetail = false
     
-    @State var selectedChat: PictooChat?
+    @State var selectedChat: PictooChatModel?
     @State var selectedImage: Image?
     
     var body: some View {
@@ -85,8 +85,8 @@ struct ImageThumnail: View {
 }
 
 #Preview {
-    PictooGallery(pictooChats: [PictooChat.chat1,
-                                PictooChat.chat2,
-                                PictooChat.chat3,
-                                PictooChat.chat4])
+    PictooGallery(pictooChats: [PictooChatModel.chat1,
+                                PictooChatModel.chat2,
+                                PictooChatModel.chat3,
+                                PictooChatModel.chat4])
 }

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct PictooView: View {
     let areChatCirclesVisible: Bool
-    var pictooChat: PictooChat
+    var pictooChat: PictooChatModel
     
     @State private var activePopoverId: UUID?
     @State private var scale: CGFloat = 1.0
@@ -87,6 +87,8 @@ struct PictooView: View {
     }
 }
 
+#if DEBUG
 #Preview {
-    PictooView(areChatCirclesVisible: true, pictooChat: PictooChat.chat2)
+    PictooView(areChatCirclesVisible: true, pictooChat: PictooChatModel.chat2)
 }
+#endif

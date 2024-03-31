@@ -10,7 +10,7 @@ import SwiftUI
 struct PictooChatView: View {
     @State private var isChatSheetPresented = false
     @State private var areChatCirclesVisible = true
-    @State var pictooChat: PictooChat
+    @State var pictooChat: PictooChatModel
     
     var body: some View {
         PictooView(areChatCirclesVisible: areChatCirclesVisible, pictooChat: pictooChat)
@@ -65,12 +65,12 @@ struct PictooChatView: View {
     }
 }
 
-struct PictooChatDetail_Previews: PreviewProvider {
-    static let image = Image(systemName: "gear")
-    
+#if DEBUG
+struct PictooChatDetail_Previews: PreviewProvider {    
     static var previews: some View {
         NavigationStack {
-            PictooChatView(pictooChat: PictooChat.chat2)
+            PictooChatView(pictooChat: PictooChatModel.chat2)
         }
     }
 }
+#endif

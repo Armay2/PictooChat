@@ -17,6 +17,8 @@ struct LoadingImageView: View {
     }
 }
 
+#if DEBUG
 #Preview {
     LoadingImageView()
 }
+#endif
