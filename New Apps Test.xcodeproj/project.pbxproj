@@ -177,9 +177,8 @@
 		516DDEB62BB8366B0008DF4F /* Friends */ = {
 			isa = PBXGroup;
 			children = (
-				5199EA362BB7516200FA515E /* FriendRow.swift */,
-				516DDEB92BB836F40008DF4F /* FriendModel.swift */,
-				5199EA342BB74EF800FA515E /* FirendsView.swift */,
+				516DDEE02BB9FE430008DF4F /* Models */,
+				516DDEDF2BB9FE3C0008DF4F /* Views */,
 			);
 			path = Friends;
 			sourceTree = "<group>";
@@ -195,12 +194,8 @@
 		516DDEB82BB836A50008DF4F /* Chat */ = {
 			isa = PBXGroup;
 			children = (
-				5199EA3C2BB7687A00FA515E /* PictooChatView.swift */,
-				516DDECF2BB8D9DF0008DF4F /* PictooView.swift */,
-				516DDEBE2BB8806E0008DF4F /* ChatView.swift */,
-				516DDEC22BB881940008DF4F /* ChatBubbleView.swift */,
-				516DDED12BB999F80008DF4F /* Message.swift */,
-				516DDED62BB9AE3F0008DF4F /* PictooChatModel.swift */,
+				516DDEDE2BB9FE290008DF4F /* Models */,
+				516DDEDD2BB9FE1C0008DF4F /* Views */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -217,9 +212,9 @@
 		516DDED52BB9A95D0008DF4F /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				14374FDC2B98A02600131332 /* UnsplashService.swift */,
-				516DDEC62BB895770008DF4F /* FriendsService.swift */,
 				14E2F7352B9F6385007CCA2C /* ChatService.swift */,
+				516DDEC62BB895770008DF4F /* FriendsService.swift */,
+				14374FDC2B98A02600131332 /* UnsplashService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -232,13 +227,50 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		516DDEDD2BB9FE1C0008DF4F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				516DDEC22BB881940008DF4F /* ChatBubbleView.swift */,
+				516DDEBE2BB8806E0008DF4F /* ChatView.swift */,
+				5199EA3C2BB7687A00FA515E /* PictooChatView.swift */,
+				516DDECF2BB8D9DF0008DF4F /* PictooView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		516DDEDE2BB9FE290008DF4F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				516DDED12BB999F80008DF4F /* Message.swift */,
+				516DDED62BB9AE3F0008DF4F /* PictooChatModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		516DDEDF2BB9FE3C0008DF4F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5199EA342BB74EF800FA515E /* FirendsView.swift */,
+				5199EA362BB7516200FA515E /* FriendRow.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		516DDEE02BB9FE430008DF4F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				516DDEB92BB836F40008DF4F /* FriendModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		5199EA402BB8339400FA515E /* Investigation */ = {
 			isa = PBXGroup;
 			children = (
+				CA2697442BB713AC00209EAB /* GalleryView.swift */,
+				5199EA382BB7586800FA515E /* ImageThumnail.swift */,
 				516DDEC82BB896120008DF4F /* LongPressCircleView.swift */,
 				5199EA3A2BB767F700FA515E /* PictooChatItem.swift */,
-				5199EA382BB7586800FA515E /* ImageThumnail.swift */,
-				CA2697442BB713AC00209EAB /* GalleryView.swift */,
 				5199EA3E2BB776F700FA515E /* TestGaleryAnimation.swift */,
 			);
 			path = Investigation;
@@ -247,10 +279,10 @@
 		5199EA412BB8346A00FA515E /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				516DDECE2BB8AE5E0008DF4F /* UIAddons */,
 				516DDEB82BB836A50008DF4F /* Chat */,
-				516DDEB72BB836760008DF4F /* Gallery */,
 				516DDEB62BB8366B0008DF4F /* Friends */,
+				516DDEB72BB836760008DF4F /* Gallery */,
+				516DDECE2BB8AE5E0008DF4F /* UIAddons */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
