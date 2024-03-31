@@ -32,18 +32,18 @@ enum ChatBubbleDirection {
     var rotationDegrees: Double {
         switch self {
         case .left:
-            return 45
+            return 65
         case .right:
-            return -45
+            return -65
         }
     }
     
     var offset: CGSize {
         switch self {
         case .left:
-            return CGSize(width: -8, height: 8)
+            return CGSize(width: -10, height: 7)
         case .right:
-            return CGSize(width: 8, height: 8)
+            return CGSize(width: 10, height: 7)
         }
     }
 }
@@ -54,7 +54,7 @@ struct ChatBubbleView: View {
     
     var body: some View {
         Text(message)
-            .padding()
+            .padding(12)
             .foregroundStyle(.white)
             .background(direction.color)
             .clipShape(RoundedRectangle(cornerRadius: 16.0, style: .continuous))

@@ -8,38 +8,63 @@
 import SwiftUI
 
 struct PictooChatView: View {
-    @State private var showingSheet = false
+    @State private var isChatSheetPresented = false
+    @State private var isPictooComVisible = true
     let pictooChat: PictooChat
     
     var body: some View {
         VStack {
-            AsyncImage(url: pictooChat.imageURL) { image in
-                image
-                    .resizable()
-                    .scaledToFill()
-                    .edgesIgnoringSafeArea(.all)
-            } placeholder: {
-                LoadingImageView()
-                    .frame(maxWidth: .infinity, maxHeight: 400)
-            }
+            PictooView(pictooChat: pictooChat)
             Spacer()
         }
-        .background(.white)
-        .frame(maxWidth: .infinity)
         .toolbar {
             ToolbarItemGroup(placement: .bottomBar) {
+                cleanButton
                 Spacer()
-                Button(action: {
-                    self.showingSheet = true
-                }) {
-                    Image(systemName: "message")
-                }
+                toggleVisibilityButton
+                Spacer()
+                chatButton
             }
         }
-        .sheet(isPresented: $showingSheet) {
+        .sheet(isPresented: $isChatSheetPresented) {
             ChatView()
                 .presentationDetents([.medium, .large])
         }
+    }
+    
+    private var cleanButton: some View {
+        Button(action: clearPictooCom) {
+            VStack {
+                Image(systemName: "eraser.fill")
+                Text("Clean")
+            }
+        }
+    }
+    
+    private var toggleVisibilityButton: some View {
+        Button(action: {
+            isPictooComVisible.toggle()
+        }) {
+            VStack {
+                Image(systemName: isPictooComVisible ? "eye.slash.fill" : "eye.fill")
+                Text(isPictooComVisible ? "Hide" : "Show")
+            }
+        }
+    }
+    
+    private var chatButton: some View {
+        Button(action: {
+            isChatSheetPresented = true
+        }) {
+            VStack {
+                Image(systemName: "message.fill")
+                Text("Chat")
+            }
+        }
+    }
+    
+    private func clearPictooCom() {
+        // Implement the cleaning logic here
     }
 }
 
@@ -48,7 +73,7 @@ struct PictooChatDetail_Previews: PreviewProvider {
     
     static var previews: some View {
         NavigationStack {
-            PictooChatView(pictooChat: PictooChat.chat1)
+            PictooChatView(pictooChat: PictooChat.chat2)
         }
     }
 }

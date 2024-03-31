@@ -57,10 +57,9 @@ struct ChatView: View {
                 }
             }
             
-            // Message input field
             HStack {
                 TextField("Type a message...", text: $viewModel.newMessageText)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .textFieldStyle(.roundedBorder)
                     .onSubmit {
                         viewModel.sendMessage()
                     }
@@ -69,7 +68,7 @@ struct ChatView: View {
                 }) {
                     Image(systemName: "arrow.up.circle.fill")
                         .resizable()
-                        .frame(width: 40, height: 40)
+                        .frame(width: 30, height: 30)
                         .foregroundColor(viewModel.newMessageText.isEmpty ? .gray : .blue)
                 }
                 .disabled(viewModel.newMessageText.isEmpty)
