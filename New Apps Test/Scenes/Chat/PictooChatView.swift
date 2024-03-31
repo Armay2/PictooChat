@@ -7,10 +7,30 @@
 
 import SwiftUI
 
+struct Message: Identifiable, Equatable {
+    let id = UUID()
+    let text: String
+    let isCurrentUser: Bool
+}
+
+class PictooChatViewModel: ObservableObject {
+    @Published var messages: [Message] = []
+    @Published var newMessageText = ""
+    
+    func sendMessage() {
+        let newMessage = Message(text: newMessageText, isCurrentUser: true)
+        let fakeResponce = Message(text: "Hey this is my answer !", isCurrentUser: false)
+        messages.append(newMessage)
+        messages.append(fakeResponce)
+        newMessageText = ""
+    }
+}
+
 struct PictooChatView: View {
+    @StateObject private var viewModel = PictooChatViewModel()
     @State private var isChatSheetPresented = false
     @State private var isPictooComVisible = true
-    let pictooChat: PictooChat
+    var pictooChat: PictooChat
     
     var body: some View {
         VStack {
@@ -27,7 +47,7 @@ struct PictooChatView: View {
             }
         }
         .sheet(isPresented: $isChatSheetPresented) {
-            ChatView()
+            ChatView(viewModel: viewModel)
                 .presentationDetents([.medium, .large])
         }
     }
@@ -65,6 +85,7 @@ struct PictooChatView: View {
     
     private func clearPictooCom() {
         // Implement the cleaning logic here
+        pictooChat.messages.append("New message")
     }
 }
 

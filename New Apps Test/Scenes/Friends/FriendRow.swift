@@ -30,8 +30,8 @@ struct FriendRow: View {
             
             ScrollView(.horizontal) {
                 LazyHStack {
-                    ForEach(friend.imagesThumnail, id: \.self) { imageURL in
-                        AsyncImage(url: imageURL) { image in
+                    ForEach(friend.pictooChats) { pictooChat in
+                        AsyncImage(url: pictooChat.imageURL) { image in
                             image
                                 .resizable()
                                 .cornerRadius(8)

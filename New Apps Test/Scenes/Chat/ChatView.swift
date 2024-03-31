@@ -7,29 +7,9 @@
 
 import SwiftUI
 
-struct Message: Identifiable, Equatable {
-    let id = UUID()
-    let text: String
-    let isCurrentUser: Bool
-}
-
-@Observable
-class ChatViewModel: ObservableObject {
-    var messages: [Message] = []
-    var newMessageText = ""
-    
-    func sendMessage() {
-        let newMessage = Message(text: newMessageText, isCurrentUser: true)
-        let fakeResponce = Message(text: "Hey this is my answer !", isCurrentUser: false)
-        messages.append(newMessage)
-        messages.append(fakeResponce)
-        newMessageText = ""
-    }
-}
-
 struct ChatView: View {
-    @StateObject private var viewModel = ChatViewModel()
-    
+    @ObservedObject var viewModel: PictooChatViewModel
+
     var body: some View {
         VStack {
             ScrollView {
@@ -89,5 +69,5 @@ struct ChatView: View {
 
 
 #Preview {
-    ChatView()
+    ChatView(viewModel: PictooChatViewModel())
 }
