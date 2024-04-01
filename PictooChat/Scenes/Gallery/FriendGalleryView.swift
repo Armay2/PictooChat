@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct FriendGalleryView: View {
-    let firendID: UUID
+    let friend: FriendModel
     let friendsService = FriendsService()
     
     let gridLayout = [
@@ -41,9 +41,9 @@ struct FriendGalleryView: View {
             .padding(10)
         }
         .navigationBarTitleDisplayMode(.inline)
-        .navigationTitle("Mike")
+        .navigationTitle(friend.name.capitalized)
         .task {
-            pictooChats = await friendsService.getFriendGallery(for: firendID) ?? []
+            pictooChats = await friendsService.getFriendGallery(for: friend.id) ?? []
         }
     }
     
@@ -51,6 +51,6 @@ struct FriendGalleryView: View {
 
 #if DEBUG
 #Preview {
-    FriendGalleryView(firendID: UUID())
+    FriendGalleryView(friend: FriendModel.kate)
 }
 #endif

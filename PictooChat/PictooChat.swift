@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct New_Apps_TestApp: App {
+struct PictooChat: App {
     var body: some Scene {
         WindowGroup {
             FirendsView()

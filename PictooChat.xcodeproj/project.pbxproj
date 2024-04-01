@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		14374FB22B989FD500131332 /* New_Apps_TestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14374FB12B989FD500131332 /* New_Apps_TestApp.swift */; };
+		14374FB22B989FD500131332 /* PictooChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14374FB12B989FD500131332 /* PictooChat.swift */; };
 		14374FB62B989FD700131332 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14374FB52B989FD700131332 /* Assets.xcassets */; };
 		14374FBA2B989FD700131332 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14374FB92B989FD700131332 /* Preview Assets.xcassets */; };
 		14374FC42B989FD700131332 /* New_Apps_TestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14374FC32B989FD700131332 /* New_Apps_TestTests.swift */; };
@@ -55,14 +55,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		14374FAE2B989FD500131332 /* New Apps Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "New Apps Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		14374FB12B989FD500131332 /* New_Apps_TestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = New_Apps_TestApp.swift; sourceTree = "<group>"; };
+		14374FAE2B989FD500131332 /* PictooChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PictooChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		14374FB12B989FD500131332 /* PictooChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictooChat.swift; sourceTree = "<group>"; };
 		14374FB52B989FD700131332 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		14374FB72B989FD700131332 /* New_Apps_Test.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = New_Apps_Test.entitlements; sourceTree = "<group>"; };
 		14374FB92B989FD700131332 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		14374FBF2B989FD700131332 /* New Apps TestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "New Apps TestTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		14374FBF2B989FD700131332 /* PictooChatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PictooChatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		14374FC32B989FD700131332 /* New_Apps_TestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = New_Apps_TestTests.swift; sourceTree = "<group>"; };
-		14374FC92B989FD700131332 /* New Apps TestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "New Apps TestUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		14374FC92B989FD700131332 /* PictooChatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PictooChatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		14374FCD2B989FD700131332 /* New_Apps_TestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = New_Apps_TestUITests.swift; sourceTree = "<group>"; };
 		14374FCF2B989FD700131332 /* New_Apps_TestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = New_Apps_TestUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		14374FDC2B98A02600131332 /* UnsplashService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashService.swift; sourceTree = "<group>"; };
@@ -81,6 +80,7 @@
 		516DDED62BB9AE3F0008DF4F /* PictooChatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictooChatModel.swift; sourceTree = "<group>"; };
 		516DDEDB2BB9F8AE0008DF4F /* Networker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networker.swift; sourceTree = "<group>"; };
 		516DDEE12BBA08340008DF4F /* ChatCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCircle.swift; sourceTree = "<group>"; };
+		516DDEE32BBAC4690008DF4F /* PictooChat.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = PictooChat.entitlements; sourceTree = "<group>"; };
 		5199EA342BB74EF800FA515E /* FirendsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirendsView.swift; sourceTree = "<group>"; };
 		5199EA362BB7516200FA515E /* FriendRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendRow.swift; sourceTree = "<group>"; };
 		5199EA382BB7586800FA515E /* ImageThumnail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageThumnail.swift; sourceTree = "<group>"; };
@@ -119,7 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				14C4BCC52B98A97F007B818F /* README.md */,
-				14374FB02B989FD500131332 /* New Apps Test */,
+				14374FB02B989FD500131332 /* PictooChat */,
 				14374FC22B989FD700131332 /* New Apps TestTests */,
 				14374FCC2B989FD700131332 /* New Apps TestUITests */,
 				14374FAF2B989FD500131332 /* Products */,
@@ -129,26 +129,26 @@
 		14374FAF2B989FD500131332 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				14374FAE2B989FD500131332 /* New Apps Test.app */,
-				14374FBF2B989FD700131332 /* New Apps TestTests.xctest */,
-				14374FC92B989FD700131332 /* New Apps TestUITests.xctest */,
+				14374FAE2B989FD500131332 /* PictooChat.app */,
+				14374FBF2B989FD700131332 /* PictooChatTests.xctest */,
+				14374FC92B989FD700131332 /* PictooChatUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		14374FB02B989FD500131332 /* New Apps Test */ = {
+		14374FB02B989FD500131332 /* PictooChat */ = {
 			isa = PBXGroup;
 			children = (
-				14374FB12B989FD500131332 /* New_Apps_TestApp.swift */,
+				14374FB12B989FD500131332 /* PictooChat.swift */,
 				516DDEDA2BB9F89C0008DF4F /* Network */,
 				516DDED52BB9A95D0008DF4F /* Services */,
 				5199EA412BB8346A00FA515E /* Scenes */,
 				5199EA402BB8339400FA515E /* Investigation */,
 				14374FB52B989FD700131332 /* Assets.xcassets */,
-				14374FB72B989FD700131332 /* New_Apps_Test.entitlements */,
+				516DDEE32BBAC4690008DF4F /* PictooChat.entitlements */,
 				14374FB82B989FD700131332 /* Preview Content */,
 			);
-			path = "New Apps Test";
+			path = PictooChat;
 			sourceTree = "<group>";
 		};
 		14374FB82B989FD700131332 /* Preview Content */ = {
@@ -282,9 +282,9 @@
 		5199EA412BB8346A00FA515E /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				516DDEB82BB836A50008DF4F /* Chat */,
 				516DDEB62BB8366B0008DF4F /* Friends */,
 				516DDEB72BB836760008DF4F /* Gallery */,
+				516DDEB82BB836A50008DF4F /* Chat */,
 				516DDECE2BB8AE5E0008DF4F /* UIAddons */,
 			);
 			path = Scenes;
@@ -293,9 +293,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		14374FAD2B989FD500131332 /* New Apps Test */ = {
+		14374FAD2B989FD500131332 /* PictooChat */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 14374FD32B989FD700131332 /* Build configuration list for PBXNativeTarget "New Apps Test" */;
+			buildConfigurationList = 14374FD32B989FD700131332 /* Build configuration list for PBXNativeTarget "PictooChat" */;
 			buildPhases = (
 				14374FAA2B989FD500131332 /* Sources */,
 				14374FAB2B989FD500131332 /* Frameworks */,
@@ -305,14 +305,14 @@
 			);
 			dependencies = (
 			);
-			name = "New Apps Test";
+			name = PictooChat;
 			productName = "New Apps Test";
-			productReference = 14374FAE2B989FD500131332 /* New Apps Test.app */;
+			productReference = 14374FAE2B989FD500131332 /* PictooChat.app */;
 			productType = "com.apple.product-type.application";
 		};
-		14374FBE2B989FD700131332 /* New Apps TestTests */ = {
+		14374FBE2B989FD700131332 /* PictooChatTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 14374FD62B989FD700131332 /* Build configuration list for PBXNativeTarget "New Apps TestTests" */;
+			buildConfigurationList = 14374FD62B989FD700131332 /* Build configuration list for PBXNativeTarget "PictooChatTests" */;
 			buildPhases = (
 				14374FBB2B989FD700131332 /* Sources */,
 				14374FBC2B989FD700131332 /* Frameworks */,
@@ -323,14 +323,14 @@
 			dependencies = (
 				14374FC12B989FD700131332 /* PBXTargetDependency */,
 			);
-			name = "New Apps TestTests";
+			name = PictooChatTests;
 			productName = "New Apps TestTests";
-			productReference = 14374FBF2B989FD700131332 /* New Apps TestTests.xctest */;
+			productReference = 14374FBF2B989FD700131332 /* PictooChatTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		14374FC82B989FD700131332 /* New Apps TestUITests */ = {
+		14374FC82B989FD700131332 /* PictooChatUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 14374FD92B989FD700131332 /* Build configuration list for PBXNativeTarget "New Apps TestUITests" */;
+			buildConfigurationList = 14374FD92B989FD700131332 /* Build configuration list for PBXNativeTarget "PictooChatUITests" */;
 			buildPhases = (
 				14374FC52B989FD700131332 /* Sources */,
 				14374FC62B989FD700131332 /* Frameworks */,
@@ -341,9 +341,9 @@
 			dependencies = (
 				14374FCB2B989FD700131332 /* PBXTargetDependency */,
 			);
-			name = "New Apps TestUITests";
+			name = PictooChatUITests;
 			productName = "New Apps TestUITests";
-			productReference = 14374FC92B989FD700131332 /* New Apps TestUITests.xctest */;
+			productReference = 14374FC92B989FD700131332 /* PictooChatUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -369,7 +369,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 14374FA92B989FD500131332 /* Build configuration list for PBXProject "New Apps Test" */;
+			buildConfigurationList = 14374FA92B989FD500131332 /* Build configuration list for PBXProject "PictooChat" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -382,9 +382,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				14374FAD2B989FD500131332 /* New Apps Test */,
-				14374FBE2B989FD700131332 /* New Apps TestTests */,
-				14374FC82B989FD700131332 /* New Apps TestUITests */,
+				14374FAD2B989FD500131332 /* PictooChat */,
+				14374FBE2B989FD700131332 /* PictooChatTests */,
+				14374FC82B989FD700131332 /* PictooChatUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -428,7 +428,7 @@
 				516DDED02BB8D9DF0008DF4F /* PictooView.swift in Sources */,
 				14E2F7362B9F6385007CCA2C /* ChatService.swift in Sources */,
 				516DDED22BB999F80008DF4F /* Message.swift in Sources */,
-				14374FB22B989FD500131332 /* New_Apps_TestApp.swift in Sources */,
+				14374FB22B989FD500131332 /* PictooChat.swift in Sources */,
 				516DDEC52BB8942F0008DF4F /* LoadingImageView.swift in Sources */,
 				516DDED72BB9AE3F0008DF4F /* PictooChatModel.swift in Sources */,
 				5199EA3B2BB767F700FA515E /* PictooChatItem.swift in Sources */,
@@ -468,12 +468,12 @@
 /* Begin PBXTargetDependency section */
 		14374FC12B989FD700131332 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 14374FAD2B989FD500131332 /* New Apps Test */;
+			target = 14374FAD2B989FD500131332 /* PictooChat */;
 			targetProxy = 14374FC02B989FD700131332 /* PBXContainerItemProxy */;
 		};
 		14374FCB2B989FD700131332 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 14374FAD2B989FD500131332 /* New Apps Test */;
+			target = 14374FAD2B989FD500131332 /* PictooChat */;
 			targetProxy = 14374FCA2B989FD700131332 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -598,10 +598,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "New Apps Test/New_Apps_Test.entitlements";
+				CODE_SIGN_ENTITLEMENTS = PictooChat/PictooChat.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"New Apps Test/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"PictooChat/Preview Content\"";
 				DEVELOPMENT_TEAM = 297AHX4JHU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -635,10 +635,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "New Apps Test/New_Apps_Test.entitlements";
+				CODE_SIGN_ENTITLEMENTS = PictooChat/PictooChat.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"New Apps Test/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"PictooChat/Preview Content\"";
 				DEVELOPMENT_TEAM = 297AHX4JHU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -686,7 +686,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/New Apps Test.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/New Apps Test";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PictooChat.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PictooChat";
 			};
 			name = Debug;
 		};
@@ -709,7 +709,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/New Apps Test.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/New Apps Test";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PictooChat.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PictooChat";
 			};
 			name = Release;
 		};
@@ -760,7 +760,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		14374FA92B989FD500131332 /* Build configuration list for PBXProject "New Apps Test" */ = {
+		14374FA92B989FD500131332 /* Build configuration list for PBXProject "PictooChat" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				14374FD12B989FD700131332 /* Debug */,
@@ -769,7 +769,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		14374FD32B989FD700131332 /* Build configuration list for PBXNativeTarget "New Apps Test" */ = {
+		14374FD32B989FD700131332 /* Build configuration list for PBXNativeTarget "PictooChat" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				14374FD42B989FD700131332 /* Debug */,
@@ -778,7 +778,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		14374FD62B989FD700131332 /* Build configuration list for PBXNativeTarget "New Apps TestTests" */ = {
+		14374FD62B989FD700131332 /* Build configuration list for PBXNativeTarget "PictooChatTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				14374FD72B989FD700131332 /* Debug */,
@@ -787,7 +787,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		14374FD92B989FD700131332 /* Build configuration list for PBXNativeTarget "New Apps TestUITests" */ = {
+		14374FD92B989FD700131332 /* Build configuration list for PBXNativeTarget "PictooChatUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				14374FDA2B989FD700131332 /* Debug */,
