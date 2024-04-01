@@ -1,4 +1,5 @@
-# PictooChat
+# <img src="./media/icon.png" width ="24"> PictooChat
+
 
 This project involves the creation of a social app focused on sharing photos. Detailed instructions for the project can be found in the file `Instructions.md`.
 
